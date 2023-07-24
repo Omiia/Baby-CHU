@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 100vw;
+            height: 250vw;
+            background-color:#AED0D1;
+            position: relative;
+
+        }
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #FBEFE1;
+        }
+        .main-nav{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            word-spacing:2em;
+        }
+        .main-nav .first-nav{
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .main-nav .second-nav{
+            margin-left: 250px;
+            padding-top: 20px;
+        }
+        .main-nav a{
+            color:#1D817D ;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .header .logo img{
+            width: 134.38px;
+            height: 96.67px;
+            margin-top: -45px;
+            display: inline-block;
+            margin-left: 520px;
+            /* background-color: #f00; */
+        }
+        .container{
+            width: 100%;    
+            height: 100%;
+            /* background-color: pink; */
+        }
+        .top-path{
+            width: 100%;
+            /* background-color: pink; */
+        }
+
+        .path a{
+            padding: 6px 1px;
+            /* position: relative; */
+            color: #1D817D;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .path a::before{
+            content:'➪';
+            color: #1D817D;
+            left:0;
+            padding: 0px 6px;
+        }
+        .path a + a::before{
+            content:'>';
+            color: #1D817D;
+            /* position: absolute; */
+            left:0;
+            padding: 0px 6px;
+        }
+        .banner{
+            width: 100%;
+            height: 45%;
+            /* background-color: #ccc; */
+            text-align: center;
+            display: flex;
+        }
+        .left-top{
+            width: 13%;
+            height: 100%;
+            /* background-color: #6fc; */
+        }
+        .left-top img{
+            margin-top: 200px;
+        }
+        .about{
+            width: 74%;
+            /* height: 100%;
+            background-color: #fc2; */
+        }
+        .about img{
+            margin-top: 100px;
+        }
+        .right-top{
+            width: 13%;
+            height: 50%;
+            /* background-color: rgb(196, 238, 98); */
+        }
+        .right-top{
+            margin-top: 650px;
+            margin-left: 78px;
+        }
+        .medium{
+            width: 100%;
+            height: 15%;
+            display: flex;
+           
+             */
+        }
+        .buy{
+            width: 80%;
+            height: 100%;
+            /* background-color: #fff; */
+        }
+        .buy img{
+            margin-top: 80px;
+            margin-left: 180px;
+        }
+        .right-medium{
+            width: 20%; 
+            height: 100%;
+            /* background-color: yellow; */
+        }
+        .right-medium img{
+            margin-left: 110px;
+        }
+        .frame{
+            width: 100%;
+            height: 15%;
+            display: flex;
+            /* background-color: #fdc; */
+        }
+        .left-medium{
+            width: 20%; 
+            height: 100%;
+            /* background-color: rgb(255, 49, 210); */
+        }
+        .left-medium img{
+            margin-top: 50px;
+        }
+
+        .pay{
+            width: 80%;
+            height: 100%;
+            /* background-color: rgb(28, 118, 209); */
+        }
+        .pay img{
+            margin-top: 20px;
+        }
+        .bottom{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            /* background-color: #ccc; */
+        }
+        .left-bottom{
+            width: 20%; 
+            height: 100%;
+            /* background-color: yellow; */
+        }
+        .left-bottom img{
+            margin-top: 150px;
+        }
+
+        .take{
+            width: 80%;
+            height: 100%;
+            /* background-color: #cde; */
+        }
+        .take img{
+            /* margin-top: 20px; */
+        }
+        .footer{
+            width: 100vw;
+            height: 10vh;
+            bottom: 0;
+            /* background-color: #fa0; */
+            position: absolute;
+        }
+        .footer .pic img{
+            width: 150px;
+            height: 100px;
+            display: inline-block;
+            margin-left: 300px;
+            margin-top: -45px;
+            border-bottom: none;
+
+        }
+        .footer-nav{
+            width: 40%;
+            display: flex;
+            margin-left: 500px;
+            word-spacing:5px;
+            margin-top: -50px;
+            border-bottom: 1px solid white;
+            /* background-color: #f00; */
+        }
+        .footer-nav a{
+            color:#1D817D ;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;           
+        }
+
+
+        .footer-nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .icon{
+            color:#1D817D ;
+            margin-left: 100px;
+            word-spacing:-1px;
+        
+        }
+        
+        .txt a{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 5px;
+        
+        }
+        .txt a:hover{
+            background-color: #ffc9c9;
+        }
+        .line{
+            color:#1D817D ;
+            margin-left: 20px;
+            
+        }
+    
+        .word a{
+            color:#1D817D ;
+            font-size: 12px;
+        margin-left: 5px;
+        
+        }
+        .word a:hover{
+            background-color: #ffc9c9;
+        }
+        .template{
+            display: flex;
+        }
+        .bone{
+            margin-left: 85vw;
+            margin-top: -8vh;
+            /* background-color: #f00; */
+        }
+        .bone-txt{
+            margin-left: -5vw;
+            margin-top: -5vh;
+        }
+        .bone-txt a{
+            text-decoration: none;
+            color:#1D817D;
+        }
+        .bone-txt a:hover{
+            color:#ffc9c9;
+        }
+
+        .footer-txt{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="box">
+        <div class="header">
+             <div class="main-nav">
+                 <nav class="first-nav">
+                     <a href="home.html">首頁</a>
+                     <a href="about.html">關於我們</a>
+                     <a href="product-list.html">商品列表</a> 
+                 </nav>  
+                 <nav class="second-nav">        
+                     <a href="connect.html">聯絡我們</a>
+                     <a href="FAQ.html">常見列表</a>
+                     <a href="member.html">會員中心</a>
+                     <a href="#">購物車</a>
+                 </nav> 
+             </div> 
+             <div class="logo">
+                 <img src="logo.png"> 
+             </div> 
+        </div>
+        <div class="container">
+            <div class="top-path">
+                <div class="path">
+                <a href="首頁.html">首頁</a>
+                <a href="關於我們.html">關於我們</a>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="left-top">
+                  <img src="cir5.png">  
+                </div>
+                <div class="about">
+                  <img src="about.png">  
+                </div>
+                <div class="right-top">
+                    <img src="cir6.png">
+                </div>
+            </div>  
+            <div class="medium">
+                <div class="buy">
+                    <img src="buy.png">
+                </div>
+                <div class="right-medium">
+                    <img src="cir7.png">
+                </div>
+            </div>
+            <div class="frame">
+                <div class="left-medium">
+                    <img src="long4.png">
+                </div>
+                <div class="pay">
+                    <img src="pay.png">
+                </div> 
+            </div>  
+            <div class="bottom">
+                <div class="left-bottom">
+                    <img src="long5.png">
+                </div>
+                <div class="take">
+                    <img src="take.png">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pic">
+                <img src="logo.png" >
+            </div>
+            <div class="footer-nav">
+                <nav>
+                    <a href="關於我們.html">如何下單</a>
+                    <a href="關於我們.html">如何付款</a>
+                    <a href="關於我們.html">如何取貨</a>
+                </nav>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="txt">
+                        <a href="#">追蹤闆娘</a>
+                    </div>
+                    <div class="line">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <div class="word">
+                        <a href="#">加入賴群</a>
+                    </div> 
+                      
+            </div>
+                      
+            <div class="footer-txt">
+                @2023 Powered by Baby CHU Reserved.
+            </div>
+            <div class="template">
+                <div class="bone">
+                    <img src="bone.png" >      
+                </div>
+                <div class="bone-txt">
+                   <a href="#">TOP</a> 
+                </div>
+           </div>
+        </div>
+
+
+</body>
+</html>

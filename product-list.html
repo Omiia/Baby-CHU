@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 100vw;
+            height: 130vw;
+            background-color:#AED0D1;
+            position: relative;
+
+        }
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #FBEFE1;
+        }
+        .main-nav{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            word-spacing:2em;
+        }
+        .main-nav .first-nav{
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .main-nav .second-nav{
+            margin-left: 250px;
+            padding-top: 20px;
+        }
+        .main-nav a{
+            color:#1D817D ;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .header .logo img{
+            width: 134.38px;
+            height: 96.67px;
+            margin-top: -45px;
+            display: inline-block;
+            margin-left: 520px;
+            /* background-color: #f00; */
+        }
+        .container{
+            width: 100%;    
+            height: 100%;
+            /* background-color: pink; */
+        }
+        .top-path{
+            width: 100%;
+            /* background-color: pink; */
+        }
+
+        .path a{
+            padding: 6px 1px;
+            /* position: relative; */
+            color: #1D817D;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .path a::before{
+            content:'➪';
+            color: #1D817D;
+            left:0;
+            padding: 0px 6px;
+        }
+        .path a + a::before{
+            content:'>';
+            color: #1D817D;
+            /* position: absolute; */
+            left:0;
+            padding: 0px 6px;
+        }
+        .choose{
+            width: 100%;
+            height: 10%;
+            /* background-color: #fff; */
+        }
+        .menu img{
+            width: 6vw;
+            height: 10vh;
+            margin-top: 2vh;
+            margin-left: 2vw;
+            /* background-color: rgb(241, 239, 239); */
+        }
+        .menu-txt{
+            /* background-color: #fa0; */
+            margin-left: 3vw;
+            margin-top: -7vh;
+        }
+        .menu-txt a{
+            font-size: 18px;
+            text-decoration: none;
+            color:#ffc9c9 ;
+            text-decoration: border;
+        }
+        .menu-txt a:hover{
+            color:#1D817D;
+        }
+        .list{
+            width:25vw;
+            /* margin: auto; */
+            display: grid;
+            grid-template-columns:repeat(3,1fr) ;
+            grid-template-rows: auto;
+            gap: 10px;    
+            /* background-color: #fff; */
+        }
+        .card:nth-child(1 of card){
+            margin-top: -30px;
+            background-color: #fff;
+        }
+        .card{
+            border: 3px solid #ffc9c9 ;
+            margin-top: 40px;
+            margin-left: 6vw;
+            border-radius: 20px;
+        }
+        .card img{
+            display: flex;
+            width: 25vw;
+            height: 40vh;
+            border-radius: 20px 20px 0px 0px;
+            
+            
+        }
+        .detail{
+            width: 100%;
+            display: flex;
+            background-color: #ffc9c9;
+            border-radius: 0px 0px 20px 20px;
+
+        }
+        .detail .txt{
+            width: 85%;
+            text-align: center;
+        }
+        .detail .txt a{
+            text-decoration: none;
+            font-size: 16px;
+            color:black;
+        }
+        .detail .txt a:hover{
+            color:white;
+        }
+        .icon-button{
+            width: 15%;
+            display: flex;
+            /* margin-left: 50px; */
+            /* background-color: #fff; */
+            justify-content: center;
+            margin-top: 3px;     
+        }
+        .icon-button i:nth-child(1 of i){
+            color: red;
+        }
+        .icon-button i:nth-child(2 of i){
+            color: #1D817D;
+        }
+        
+        .footer{
+            width: 100vw;
+            height: 10vh;
+            bottom: 0;
+            /* background-color: #fa0; */
+            position: absolute;
+        }
+        .footer .pic img{
+            width: 150px;
+            height: 100px;
+            display: inline-block;
+            margin-left: 300px;
+            margin-top: -45px;
+            border-bottom: none;
+
+        }
+        .footer-nav{
+            width: 40%;
+            display: flex;
+            margin-left: 500px;
+            word-spacing:5px;
+            margin-top: -50px;
+            border-bottom: 1px solid white;
+            /* background-color: #f00; */
+        }
+        .footer-nav a{
+            color:#1D817D ;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;           
+        }
+
+
+        .footer-nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .icon{
+            color:#1D817D ;
+            margin-left: 100px;
+            word-spacing:-1px;
+        
+        }
+        
+        .txt a{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 5px;
+        
+        }
+        .txt a:hover{
+            background-color: #ffc9c9;
+        }
+        .line{
+            color:#1D817D ;
+            margin-left: 20px;
+            
+        }
+    
+        .word a{
+            color:#1D817D ;
+            font-size: 12px;
+        margin-left: 5px;
+        
+        }
+        .word a:hover{
+            background-color: #ffc9c9;
+        }
+        .template{
+            display: flex;
+        }
+        .bone{
+            margin-left: 85vw;
+            margin-top: -8vh;
+            /* background-color: #f00; */
+        }
+        .bone-txt{
+            margin-left: -5vw;
+            margin-top: -5vh;
+        }
+        .bone-txt a{
+            text-decoration: none;
+            color:#1D817D;
+        }
+        .bone-txt a:hover{
+            color:#ffc9c9;
+        }
+
+        .footer-txt{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="header">
+             <div class="main-nav">
+                 <nav class="first-nav">
+                     <a href="home.html">首頁</a>
+                     <a href="about.html">關於我們</a>
+                     <a href="product-list.html">商品列表</a> 
+                 </nav>  
+                 <nav class="second-nav">        
+                     <a href="connect.html">聯絡我們</a>
+                     <a href="FAQ.html">常見問題</a>
+                     <a href="member.html">會員中心</a>
+                     <a href="#">購物車</a>
+                 </nav> 
+             </div> 
+             <div class="logo">
+                 <img src="logo.png"> 
+             </div> 
+        </div>
+        <div class="container">
+            <div class="top-path">
+                <div class="path">
+                    <a href="home.html">首頁</a>
+                    <a href="product-list.html">商品列表</a>
+                </div>
+            </div>    
+            <div class="choose">
+                <div class="menu"> 
+                    <img src="bone.png"> 
+                </div>
+                <div class="menu-txt">
+                    <a href="#">MENU</a>
+                </div>
+            </div>
+            <div class="list">
+                <div class="card">
+                    <div class="img">
+                        <img src="product/zipper.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="product-introduce.html">Hello Kitty雙軌密封夾鏈袋(大)</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                     <div class="img">
+                        <img src="product/stamp.jpg">
+                        </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">卡通動物保密印章(3入)</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="img">
+                        <img src="product/ear.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="ˇ">不鏽鋼彈簧螺旋掏耳六件套</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="card">
+                    <div class="img">
+                        <img src="product/table lamp.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">多功能可調軟管柔光護眼檯燈</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                     <div class="img">
+                        <img src="product/socks.jpg">
+                        </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">吸濕超透氣純色防臭棉襪(6雙)</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="img">
+                        <img src="product/bag.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">手提便攜折疊收納包</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="list">
+                <div class="card">
+                    <div class="img">
+                        <img src="product/perfume.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">是我流沙香水(2入)</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="product/box.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">可愛小雞造型大開口收納吊籃(3入)</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="product/glass-bag.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">磁吸自動閉合眼鏡袋(5入)</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="list">
+                <div class="card">
+                    <div class="img">
+                        <img src="product/bowl.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">清新小花大容量陶瓷雙耳湯碗1500ML</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="product/scale.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">草莓甜心多功能精準料理磅秤</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="product/teapot.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="txt">
+                            <a href="#">茶水分離耐高溫玻璃茶壺</a>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        <div class="footer">
+            <div class="pic">
+                <img src="logo.png" >
+            </div>
+            <div class="footer-nav">
+                <nav>
+                    <a href="about.html">如何下單</a>
+                    <a href="about.html">如何付款</a>
+                    <a href="about.html">如何取貨</a>
+                </nav>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="txt">
+                        <a href="#">追蹤闆娘</a>
+                    </div>
+                    <div class="line">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <div class="word">
+                        <a href="#">加入賴群</a>
+                    </div> 
+                      
+            </div>
+                      
+            <div class="footer-txt">
+                @2023 Powered by Baby CHU Reserved.
+            </div>
+            <div class="template">
+                <div class="bone">
+                    <img src="bone.png" >      
+             </div>
+                <div class="bone-txt">
+                    <a href="#">TOP</a> 
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

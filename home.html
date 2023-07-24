@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby CHU</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 100vw;
+            height: 300vw;
+            background-color:#AED0D1;
+            position: relative;
+
+        }
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #FBEFE1;
+        }
+        .main-nav{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            word-spacing:2em;
+        }
+        .main-nav .first-nav{
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .main-nav .second-nav{
+            margin-left: 250px;
+            padding-top: 20px;
+        }
+        .main-nav a{
+            color:#1D817D ;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .header .logo img{
+            width: 134.38px;
+            height: 96.67px;
+            margin-top: -45px;
+            display: inline-block;
+            margin-left: 520px;
+            /* background-color: #f00; */
+        }
+        .container{
+            width: 100%;    
+            height: 100%;
+            /* background-color: pink; */
+        }
+        .banner{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            /* background-color: #4480e1; */
+            position: relative;
+
+        }               
+       .decorate{
+            width: 20%;
+            height: 100%;
+            /* background-color: #fa0; */
+        }
+        .decorate img{
+            width: 110px;
+            height: 190px;
+            /* background-color: rgb(87, 229, 61) ;  */
+            padding-top: 200px;       
+        }
+        .section{
+            width: 60%;
+            height: 100%;
+            /* background-color: #f00; */
+        }
+
+        .section img{
+            width: 744px;
+            height: 600.7px;
+            /* background-color: #f00; */
+            position: absolute;
+            margin-top: 100px;
+        }
+        .right-side{
+            width: 20%;
+            height: 100%;
+            /* background-color: yellow; */
+            display: block;
+        }
+        .right-side:nth-child(1 of .right-side){
+            width: 170px;
+            height: 130px;
+            /* background-color: #f00; */
+            margin-left: 120px;
+            margin-top: 200px;     
+        }
+        .right-side img:nth-child(2 of img){
+            width: 150px;
+            height: 190.47px;
+            /* background-color: #fa0; */
+            margin-top: 100px;
+            margin-left: 20px;     
+        }
+        .wrap{
+            width: 100%;
+            height: 20%;
+            /* background-color: purple; */
+        }
+        .month-act img{
+            width: 1078.92px;
+            height: 583.97px;
+            margin-left:90px;
+            margin-top: 100px;
+            display: inline;
+        }
+        .slogn{
+            width: 100%;
+            height: 10%;
+            color:#1D817D ;
+            text-align: center;
+            margin-top: -570px;
+            /* background-color: yellow; */
+        }
+        .slogn h2{
+            font-weight: bolder;
+            font-size: 24px;
+            /* background-color: #fff; */
+        }
+        .slogn p{
+            font-size: 16px;
+            margin-top: 3vh;
+            /* background-color: #f00; */
+        }
+        .act{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            /* background-color: #fff; */
+        }
+        .circle{
+            width: 10%;
+            height: 100%;
+            margin-top: 100px;
+            /* background-color: #ccc; */
+        }
+        .model{
+            width: 36.5%;
+            height: 67.5%;
+            margin-left: 30px;
+            margin-top: 50px;
+            border: 5px solid white;
+            border-radius: 21px;
+            /* background-color: yellow; */
+
+        }
+        .pic{
+            width: 50%;
+            height: 100%;
+        }
+        .act-txt{
+            width: 40%;
+            height: 100%;
+            margin-left: 5vw;
+            margin-top: 5vh;
+            /* background-color: #567; */
+        }
+        .act-title{
+            width:  100%;
+            height: 50%;
+            /* background-color: #f00; */
+            margin-top: 50px;
+        }
+        .button{
+            width: 100%;
+            height: 25%;
+            text-align: center;
+            /* background-color: rgb(238, 218, 197); */
+        }
+        .button a{
+            background-color: #f00;
+            color: white;
+            font-size: 14px;
+            display: inline-block;
+            width: 10vw;
+            height: 3vh;
+            padding: 2vh;
+            margin-top: 5vh;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-left: 15vw;
+        }
+        .button a:hover{
+            color: #000;
+        }
+        .act-txt p:nth-child(1 of p){
+            font-size: 16px;
+            color: gray;
+            
+        }
+        .act-txt h3:nth-child(1 of h3){
+            font-size: 24px;
+            padding-top: 1vh;
+            /* background-color: pink; */
+        }
+        .act-txt p:nth-child(2 of p){
+            width: 100%;
+            height: 50%;
+            font-size: 18px;
+            padding-top: 3vh;
+            line-height: 40px;
+            /* background-color: #fa0; */
+        }
+        .area{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            color:#1D817D ;
+            /* background-color: pink; */
+        }
+        .announce h2{
+            text-align: center;
+            color: #1D817D;
+        }
+        .announce p{
+            margin-top: 5vh;
+        }
+        .product{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            /* background-color: #f00; */
+            margin-bottom: 200px;
+        }
+        .pillow{
+            width:35%;
+            height: 70%;  
+            margin-top: 60px;
+            /* background-color: rgb(91, 215, 231);      */
+        }
+        .pillow img{
+            margin-top: 80px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .pillow h3{
+            font-weight: bolder;
+            /* background-color: #fff; */
+        }
+        .pillow p{
+            color: #E67560;
+        }
+        .tissue{
+            width:35%;
+            height: 70%; 
+            margin-top: 60px;
+            /* background-color: #fa0; */
+        }
+        .tissue img{
+            margin-top:80px;
+            border: 1px solid white;
+            border-radius: 20px;
+
+        }
+        .tissue h3{
+            font-weight: bolder;
+            /* background-color: #fff; */
+        }
+        .tissue p{
+            color: #E67560;
+        }
+        .cushion{
+            width:30%;
+            height: 70%; 
+            margin-top: 60px;
+            /* background-color: #666; */
+        }
+        .cushion img{
+            margin-top: 80px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .cushion h3{
+            font-weight: bolder;
+            /* background-color: #000; */
+        }
+        .cushion p{
+            color: #E67560;
+        }
+        .view{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            color:#1D817D ;
+            /* background-color: #fff; */
+        }
+        .recommend{
+        margin-top: -10vh;
+            /* background-color: #f00; */
+        }
+        .recommend p{
+            margin-top: 5vh;
+        }
+        .recommend img{
+            width: 60px;
+            height: 110px;
+           margin-left: 95vw;
+           /* background-color: yellow; */
+        }
+        .good{
+            width: 100%;
+            height: 80%;
+            text-align: center;
+            color:#1D817D ;
+            display: flex;
+            /* background-color: pink; */
+        }
+        .camera{
+            width:35%;
+            height: 100%; 
+            /* margin-top: 60px; */
+            /* background-color: #Cfb; */
+        }
+        .camera img{
+            margin-top: 80px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .camera h3{
+            font-weight: bolder;
+            /* background-color: #fcc; */
+        }
+        .camera p{
+            color: #E67560;
+        }
+        .chair{
+            width:30%;
+            height: 100%; 
+            /* margin-top: 60px; */
+            /* background-color: #aff; */
+        }
+        .chair img{
+            margin-top: 80px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .chair h3{
+            font-weight: bolder;
+            /* background-color: #cde; */
+        }
+        .chair p{
+            color: #E67560;
+        }
+        .lighter{
+            width:35%;
+            height: 100%; 
+            /* margin-top: 60px; */
+            /* background-color: #bbf; */
+        }
+        .lighter img{
+            margin-top: 80px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .lighter h3{
+            margin-top: 30px;
+            font-weight: bolder;
+            /* background-color: #cde; */
+        }
+        .lighter p{
+            color: #E67560;
+        }
+        .classification{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            color:#1D817D ;
+            /* background-color: #000; */
+        }
+        .frame{
+            width: 100%;
+            height: 1%;
+            text-align: center;
+        }
+        .name{
+            width: 100%;
+            height: 10%;
+            /* background-color: #f00;   */
+            margin-top: 10vh; 
+        }
+        .commodity{
+            width: 100%;
+            height: 10%;
+            word-spacing: 100px;
+            /* background-color: #ecd; */
+            margin-top: 10vh;
+            margin-right: 50px;
+        }
+        
+       .name-tag{
+            width: 100%;
+            height: 10%;
+            word-spacing: 100px;
+            text-align: center;
+            /* background-color: #fff; */
+       }
+       .name-tag a{
+            text-decoration: none ;
+            color: #000;
+            background-color: #F4CBC8;
+            border: 5 solid #F4CBC8;
+       }
+       .name-tag a:hover{
+            color: #1D817D;
+       }
+       .merchandise{
+            width: 100%;
+            height: 10%;
+            word-spacing: 100px;
+            /* background-color: #ecd; */
+            margin-top: 5vh;
+            margin-right: 50px;
+        }
+        .product-tag{
+            width: 100%;
+            height: 10%;
+            word-spacing: 115px;
+            /* margin-top: 20vh; */
+            margin-left: -15px;
+            /* background-color: #fff; */
+       }
+       .product-tag a{
+            text-decoration: none ;
+            color: #000;
+            background-color: #F4CBC8;
+            border: 5 solid #F4CBC8;
+       }
+       .product-tag a:hover{
+            color: #1D817D;
+       }
+
+        .footer{
+            width: 100vw;
+            height: 10vh;
+            bottom: 0;
+            /* background-color: #fa0; */
+            position: absolute;
+        }
+        .footer .pic img{
+            width: 150px;
+            height: 100px;
+            display: inline-block;
+            margin-left: 300px;
+            margin-top: -45px;
+            border-bottom: none;
+
+        }
+        .footer-nav{
+            width: 40%;
+            display: flex;
+            margin-left: 500px;
+            word-spacing:5px;
+            margin-top: -50px;
+            border-bottom: 1px solid white;
+            /* background-color: #f00; */
+        }
+        .footer-nav a{
+            color:#1D817D ;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;           
+        }
+
+
+        .footer-nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .icon{
+            color:#1D817D ;
+            margin-left: 100px;
+            word-spacing:-1px;
+           
+        }
+        
+        .txt a{
+            color:#1D817D ;
+            font-size: 12px;
+           margin-left: 5px;
+           
+        }
+        .txt a:hover{
+            background-color: #ffc9c9;
+        }
+        .line{
+            color:#1D817D ;
+            margin-left: 20px;
+            
+        }
+       
+        .word a{
+            color:#1D817D ;
+            font-size: 12px;
+           margin-left: 5px;
+          
+        }
+        .word a:hover{
+            background-color: #ffc9c9;
+        }
+        .template{
+            display: flex;
+        }
+        .bone{
+            margin-left: 85vw;
+            margin-top: -8vh;
+            /* background-color: #f00; */
+        }
+        .bone-txt{
+            margin-left: -5vw;
+            margin-top: -5vh;
+        }
+        .bone-txt a{
+            text-decoration: none;
+            color:#1D817D;
+        }
+        .bone-txt a:hover{
+            color:#ffc9c9;
+        }
+        .footer-txt{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="header">
+             <div class="main-nav">
+                 <nav class="first-nav">
+                     <a href="home.html">首頁</a>
+                     <a href="about.html">關於我們</a>
+                     <a href="product-list.html">商品列表</a> 
+                 </nav>  
+                 <nav class="second-nav">        
+                     <a href="connect.html">聯絡我們</a>
+                     <a href="FAQ.html">常見問題</a>
+                     <a href="member.html">會員中心</a>
+                     <a href="#">購物車</a>
+                 </nav> 
+             </div> 
+             <div class="logo">
+                 <img src="logo.png"> 
+             </div> 
+         </div>
+         <div class="container">
+            <div class="banner"> 
+                <div class="decorate">
+                    <img src="home/cir1.png">
+                </div>
+                <div class="section">
+                    <img src="home/top.png">
+                </div>                
+                <div class="right-side">
+                    <img src="home/long3.png">
+                    <img src="home/long2.png">
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="month-act">
+                    <img src="home/Re1.png">
+                </div>                
+                <div class="slogn">
+                    <h2><strong>本月活動</strong></h2>
+                    <p>這個月最夯~~的活動，你絕對不可以錯過! </p>
+                </div>
+                <div class="act">
+                    <div class="circle">
+                        <img src="home/cir3.png" alt="">
+                    </div> 
+                    <div class="model">
+                        <div class="pic">
+                            <img src="home/secret.png">
+                        </div>
+                    </div>
+                    <div class="act-txt">
+                        <div class="act-title">
+                            <p>2023.07.15</p>
+                            <h3>神秘加人禮</h3>
+                            <p>想要知道Baby CHU有甚麼神秘的加人禮可以領取嗎?<br>想要知道Baby CHU加人禮該怎麼樣才可以領取到嗎?</br></p>
+                        </div>
+                        <div class="button">
+                            <a href="#">點我看更多 > ></a>
+                        </div>  
+                    </div>                
+                </div>
+            </div>
+            <div class="area">
+                <div class="announce">
+                    <h2><strong>現貨專區</strong></h2>
+                    <p>我們提供工具、食品、生活必需品、文具及居家裝飾療育商品</p>
+                </div>
+                <div class="product">
+                    <div class="pillow">
+                        <img src="home/pillow.png">
+                        <h3><strong>護腰靠墊</strong></h3>
+                        <p>$230</p>
+                    </div>
+                    <div class="tissue">
+                        <img src="home/tissue.png">
+                        <h3>翻蓋濕紙巾(6包一組)</h3>
+                        <p>$160</p>
+
+                    </div>
+                    <div class="cushion">
+                        <img src="home/cushion.png">
+                        <h3>小熊冰涼墊(5入一組)</h3>
+                        <p>$95</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view">
+                <div class="recommend">
+                    <h2><strong>好物推薦</strong></h2>
+                    <p>我們提供工具、食品、生活必需品、文具及居家裝飾療育商品</p>
+                    <img src="home/cir4.png">
+                </div>
+                <div class="good">
+                    <div class="camera">
+                        <img src="home/camera.png">
+                        <h3>藍芽攝影機</h3>
+                        <p>$190</p>
+                    </div>
+                    <div class="chair">
+                        <img src="home/chair.png">
+                        <h3>矯正護腰墊</h3>
+                        <p>$225</p>
+                    </div>
+                    <div class="lighter">
+                        <img src="home/lighter.png" alt="">
+                        <h3>照明打火機</h3>
+                        <p>$250</p>
+                    </div>
+                </div>
+            </div>
+            <div class="classification">               
+                <div class="frame">
+                    <img src="home/Re2.png" alt="">
+                </div>
+                <div class="name">
+                    <h2>商品分類</h2>
+                </div>
+                <div class="commodity">
+                    <img src="home/shirt.png">
+                    <img src="home/make-up.png">
+                    <img src="home/bedroom.png">
+                    <img src="home/3C.png">
+                    <img src="home/kitchen.png">
+                    <img src="home/clean.png">
+                </div>
+                <div class="name-tag">
+                    <a href="#">穿著商品</a>
+                    <a href="#">彩妝保養</a>
+                    <a href="#">生活寢具</a>
+                    <a href="#">3C產品</a> 
+                    <a href="#">廚房衛浴</a>
+                    <a href="#">清潔用品</a>
+                </div>
+                <div class="merchandise">
+                    <img src="home/stationary.png">
+                    <img src="home/food.png">
+                    <img src="home/light.png">
+                    <img src="home/car&motor.png">
+                    <img src="home/tools.png">
+                    <img src="home/others.png">
+                </div>
+                <div class="product-tag">
+                    <a href="#">文具及玩具</a>
+                    <a href="#">食品</a>
+                    <a href="#">照明用具</a>
+                    <a href="#">汽機車用品</a> 
+                    <a href="#">工具</a>
+                    <a href="#">其他</a>
+                </div>
+                
+            </div>
+             
+         </div>
+         <div class="footer">
+            <div class="pic">
+                <img src="logo.png" >
+            </div>
+            <div class="footer-nav">
+                <nav>
+                    <a href="about.html">如何下單</a>
+                    <a href="about.html">如何付款</a>
+                    <a href="about.html">如何取貨</a>
+                </nav>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="txt">
+                        <a href="#">追蹤闆娘</a>
+                    </div>
+                    <div class="line">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <div class="word">
+                        <a href="#">加入賴群</a>
+                    </div>     
+            </div>
+            <div class="footer-txt">
+                @2023 Powered by Baby CHU Reserved.
+            </div>
+            <div class="template">
+                <div class="bone">
+                    <img src="bone.png" >      
+                </div>
+                <div class="bone-txt">
+                   <a href="#">TOP</a> 
+                </div>
+           </div>
+        </div>
+
+</body>
+</html>

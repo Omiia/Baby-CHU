@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty雙軌密封夾鏈袋(大)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 100vw;
+            height: 200vw;
+            background-color:#AED0D1;
+            position: relative;
+
+        }
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #FBEFE1;
+        }
+        .main-nav{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            word-spacing:2em;
+        }
+        .main-nav .first-nav{
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .main-nav .second-nav{
+            margin-left: 250px;
+            padding-top: 20px;
+        }
+        .main-nav a{
+            color:#1D817D ;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .header .logo img{
+            width: 134.38px;
+            height: 96.67px;
+            margin-top: -45px;
+            display: inline-block;
+            margin-left: 520px;
+            /* background-color: #f00; */
+        }
+        .container{
+            width: 100%;    
+            height: 95%;
+            /* background-color: pink; */
+        }
+        .banner{
+            width: 80%;
+            height: 20%;
+            display: flex;
+            background-color: #FBEFE1;
+            border-radius:20px;
+            margin-top: 10vh;
+            margin-left: 10vw;
+
+        }
+      
+        .wrap{
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            /* background-color: #f00; */
+
+        } 
+        .product-img{
+            width: 100%;
+            height: 80%;
+            /* background-color: #5ec2e7; */
+        }
+        .product-img img{
+            width: 38vw;
+            height: 55vh;
+            margin-top: 6vh;
+            margin-left: 5vw;
+            border: 3px solid #ffc9c9;
+            /* background-color: #e4f044; */
+           
+        }
+        .others{
+            width: 100%;
+            height: 20%;
+            display: flex;
+        }
+        .others img{
+            width: 5vw;
+            height: 10vh;
+            margin-top: 3.5vh;
+            margin-left: 4vw;
+            border: 3px solid #ffc9c9;
+        }
+        .btn{
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            /* background-color: #fa0; */
+        }
+        .size{
+            width: 100%;
+            height: 32%;
+            display: flex;
+            /* background-color: #f056b8; */
+        }
+        .size h3{
+            font-size: 24px;
+            color: #1D817D;
+            margin-left: 12vw;
+            margin-top: 10vh;
+        }
+        .size a{
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            display: inline-block;
+            width: 5vw;
+            height: 5vh;
+            margin-top: 11vh;
+            text-decoration: none;
+        }
+        .size a:hover{
+            background-color: #f00;
+        }
+         .quality{
+            width: 100%;
+            height: 33%;
+            display: flex;
+            /* background-color: #f04d5e; */
+        }
+        .quality label{
+            font-size: 24px;
+            color: #1D817D;
+            margin-left: 12vw;
+            margin-top: 10vh;
+        }
+        .quality select{
+            width: 10vw;
+            height: 5vh;
+            margin-top: 11vh;
+        }
+        .cart{
+            width: 100%;
+            height: 35%;
+            display: flex;
+            /* background-color: #29f075; */
+        }
+        .cart a{
+            background-color: #f00;
+            color: white;
+            font-size: 20px;
+            display: inline-block;
+            width: 15vw;
+            height: 5vh;
+            padding: 5vh;
+            margin-top:10vh;
+            margin-left: 12vw;
+            text-decoration: none;
+        }
+        .cart a:hover{
+            color: #000;
+        }
+        .writing{
+            width: 80%;
+            height: 75%;
+            background-color: #FBEFE1;
+            border-radius:20px;
+            margin-top: 4vh;
+            margin-left: 10vw;
+        }
+        .writing h2{
+            color: #1D817D;
+            margin-left: 5vw;
+            padding-top: 3vh;
+            /* background-color: #fff; */
+        }
+        .writing p{
+            font-size: 16px;
+            line-height: 1.5em; 
+            padding-top: 5vh;
+            padding-left: 5vw;
+            /* background-color: #f00; */
+        }
+        .top-path{
+            width: 100%;
+            /* background-color: pink; */
+        }
+        .path a{
+            padding: 6px 1px;
+            /* position: relative; */
+            color: #1D817D;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .path a::before{
+            content:'➪';
+            color: #1D817D;
+            left:0;
+            padding: 0px 6px;
+        }
+        .path a + a::before{
+            content:'>';
+            color: #1D817D;
+            /* position: absolute; */
+            left:0;
+            padding: 0px 6px;
+        }
+        .footer{
+            width: 100vw;
+            height: 10vh;
+            bottom: 0;
+            /* background-color: #fa0; */
+            position: absolute;
+        }
+        .footer .pic img{
+            width: 150px;
+            height: 100px;
+            display: inline-block;
+            margin-left: 300px;
+            margin-top: -48px;
+            border-bottom: none;
+
+        }
+        .footer-nav{
+            width: 40%;
+            display: flex;
+            margin-left: 500px;
+            word-spacing:5px;
+            margin-top: -50px;
+            border-bottom: 1px solid white;
+            /* background-color: #f00; */
+        }
+        .footer-nav a{
+            color:#1D817D ;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;           
+        }
+
+
+        .footer-nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .icon{
+            color:#1D817D ;
+            margin-left: 100px;
+            word-spacing:-1px;
+        
+        }
+        
+        .txt a{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 5px;
+        
+        }
+        .txt a:hover{
+            background-color: #ffc9c9;
+        }
+        .line{
+            color:#1D817D ;
+            margin-left: 20px;
+            
+        }
+    
+        .word a{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 5px;
+        
+        }
+        .word a:hover{
+            background-color: #ffc9c9;
+        }
+        .template{
+            display: flex;
+        }
+        .bone{
+            margin-left: 85vw;
+            margin-top: -10vh;
+            /* background-color: #f00; */
+        }
+        .bone-txt{
+            margin-left: -5vw;
+            margin-top: -6.5vh;
+        }
+        .bone-txt a{
+            text-decoration: none;
+            color:#1D817D ;
+        }
+        .bone-txt a:hover{
+            color:#ffc9c9;
+        }
+
+        .footer-txt{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="header">
+             <div class="main-nav">
+                 <nav class="first-nav">
+                     <a href="home.html">首頁</a>
+                     <a href="about.html">關於我們</a>
+                     <a href="product-list.html">商品列表</a> 
+                 </nav>  
+                 <nav class="second-nav">        
+                     <a href="connect.html">聯絡我們</a>
+                     <a href="FAQ.html">常見問題</a>
+                     <a href="member.html">會員中心</a>
+                     <a href="#">購物車</a>
+                 </nav> 
+             </div> 
+             <div class="logo">
+                 <img src="logo.png"> 
+             </div> 
+        </div>
+        <div class="container">
+            <div class="top-path">
+                <div class="path">
+                    <a href="home.html">首頁</a>
+                    <a href="product-list.html">商品列表</a>
+                    <a href="product-introduce.html">Hello Kitty雙軌密封夾鏈袋(大)</a>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="wrap">
+                    <div class="product-img">
+                        <img src="product/zipper.jpg">
+                    </div>
+                    <div class="others">
+                        <img src="product/zipper1.jpg">
+                        <img src="product/zipper2.jpg">
+                        <img src="product/zipper3.jpg">
+                        <img src="product/zipper4.jpg">
+                        <img src="product/zipper5.jpg">
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="size">
+                        <h3>尺寸：</h3>
+                        <a href="#">單一</a>
+                    </div>
+                    <div class="quality">
+                        <label for="">數量：</label>
+                        <select name="" id="">
+                            <option value="">請選擇：</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                    <div class="cart">
+                        <a href="#">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="writing">
+                <h2>商品介紹：</h2>
+
+                <p>👉【預購】👈</p>
+                <p>
+                    <br>A339 - Hello Kitty雙軌密封夾鏈袋(大)</br>
+                    <br>❤️一盒15入</br>
+                    <br></br>
+                    <br>【商品尺寸】-28x27cm</br>
+                    <br>【商品說明】-</br>
+                    <br>☀優選加厚PE材質</br>
+                    <br>裝入湯湯水水等食材</br>
+                    <br>不易破損、不易外漏</br>
+                    <br></br>
+                    <br>☀雙軌密封設計</br>
+                    <br>提供更高的密封性能</br>
+                    <br>防止灰塵、小蟲、異味等進入袋內</br>
+                    <br>或是溢漏問題！</br>
+                    <br></br>
+                    <br>✨密封保鮮真的超好用der~</br>
+                    <br>用來儲存蔬果及食物</br>
+                    <br>延長食物新鮮度都不是問題👍</br>
+                    <br>就算放廚餘不會飄散出怪味</br>
+                    <br>還能減少蟑螂螞蟻壞蟲🪳滋生喔！</br>
+                    <br>保持廚房乾爽無味</br>
+                    <br></br>
+                    <br>✨封住廚餘怪味✨</br>
+                    <br>☀透明袋身，一目了然</br>
+                    <br>讓你拿取物品不必再倒處翻找了</br>
+                    <br>一袋一袋分裝好後</br>
+                    <br>還能✨減少空間浪費✨</br>
+                    <br>放人冰箱、桌面、抽屜更好收納</br>
+                    <br>比起各種✖瓶裝✖罐裝✖盒裝</br>
+                    <br>儲存堆疊還不佔空間</br>
+                    <br></br>
+                    <br></br>
+                    <br>🔊 一盒(15入)  💰 80</br>
+                </p>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pic">
+                <img src="logo.png" >
+            </div>
+        <div class="footer-nav">
+            <nav>
+                <a href="about.html">如何下單</a>
+                <a href="about.html">如何付款</a>
+                <a href="about.html">如何取貨</a>
+            </nav>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="txt">
+                    <a href="#">追蹤闆娘</a>
+                </div>
+                <div class="line">
+                    <i class="fa-brands fa-line"></i>
+                </div>
+                <div class="word">
+                    <a href="#">加入賴群</a>
+                </div> 
+                  
+        </div>
+                  
+        <div class="footer-txt">
+            @2023 Powered by Baby CHU Reserved.
+        </div>
+        <div class="template">
+            <div class="bone">
+                <img src="bone.png" >      
+            </div>
+            <div class="bone-txt">
+                <a href="#">TOP</a> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

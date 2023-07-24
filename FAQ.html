@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見問題</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 100vw;
+            height: 100vw;
+            background-color:#AED0D1;
+            position: relative;
+
+        }
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #FBEFE1;
+        }
+        .main-nav{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            word-spacing:2em;
+        }
+        .main-nav .first-nav{
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .main-nav .second-nav{
+            margin-left: 250px;
+            padding-top: 20px;
+        }
+        .main-nav a{
+            color:#1D817D ;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .header .logo img{
+            width: 134.38px;
+            height: 96.67px;
+            margin-top: -45px;
+            display: inline-block;
+            margin-left: 520px;
+            /* background-color: #f00; */
+        }
+        .container{
+            width: 100%;    
+            height: 100%;
+            /* background-color: pink; */
+        }
+        .top-path{
+            width: 100%;
+            /* background-color: pink; */
+        }
+
+        .path a{
+            padding: 6px 1px;
+            /* position: relative; */
+            color: #1D817D;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .path a::before{
+            content:'➪';
+            color: #1D817D;
+            left:0;
+            padding: 0px 6px;
+        }
+        .path a + a::before{
+            content:'>';
+            color: #1D817D;
+            /* position: absolute; */
+            left:0;
+            padding: 0px 6px;
+        }
+        .search-box{
+            width: 100%;
+            height: 5%;
+            display: flex;
+            /* background-color: #fff; */
+        }
+        .search-line input{
+            background-color: #AED0D1;
+            width: 30vw;
+            height: 5vh;
+            margin-top: 4vh;
+            margin-left: 30vw ;
+        }
+        .search-button button{
+            width: 3vw;
+            height: 5.5vh;
+            /* background-color: #ffc9c9; */
+            margin-top: 4vh;
+        }
+        .search-button button img{
+            width: 2.9vw;
+            height: 5vh;
+            background-color: #ffc9c9;
+        }
+        .top-section{
+            width: 100%;
+            height: 35%;
+            /* background-color: pink; */
+            display: flex;
+            /* text-align: center; */
+            margin-top: 13vh;
+            
+        }
+        .left-top{
+            width: 10%;
+            height: 80%;
+            /* background-color: #fa0; */
+        }
+        .left-top img{
+            margin-top: -15vh;
+        }
+        .product-QA{
+            width: 40%;
+            height: 80%;
+            background-color: #FBEFE1;
+            border-radius: 50px;
+            border: 3px solid #ffc9c9; 
+            margin-left: 2vw;           
+        }
+        .QA{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            /* background-color: #bdc; */
+            margin-top: 3vh;
+            
+        }
+        .QA h3{
+            color: #1D817D;
+            padding-top: 2vh;
+            background-color: #ffc9c9;
+            font-size: 24px;
+            display: inline-block;
+            width: 10vw;
+            height: 8vh;
+            margin-top: 0.5vh;
+        }
+        .QA-txt{
+            width: 100%;
+            height: 40%;
+            /* background-color: #1fd; */
+            margin-top: 3vh;
+        }
+        .QA-txt a{
+            text-decoration: none;
+            color:#1D817D;
+            line-height: 3;
+            margin-left: 5vw;
+        }
+        .more{
+            width: 100%;
+            height: 35%;
+            text-align: center;
+            margin-top: 6vh;
+            /* background-color: #fff; */
+        }
+        .more a{
+            background-color: #f00;
+            color: white;
+            font-size: 14px;
+            display: inline-block;
+            width: 8vw;
+            height: 3vh;
+            padding: 2vh;
+            margin-left: 22vw;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .more a:hover{
+            color: #000;
+        }
+        .buy-QA{
+            width: 40%;
+            height: 80%;
+            background-color: #FBEFE1;
+            border-radius: 50px;
+            border: 3px solid #ffc9c9;
+            margin-left: 6vw;
+        }
+        .FAQ{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            /* background-color: #bdc; */
+            margin-top: 3vh;
+        }
+        .FAQ h3{
+            color: #1D817D;
+            padding-top: 2vh;
+            background-color: #ffc9c9;
+            font-size: 24px;
+            display: inline-block;
+            width: 10vw;
+            height: 8vh;
+            margin-top: 0.5vh;
+        }
+        .FAQ-txt{
+            width: 100%;
+            height: 40%;
+            /* background-color: #1fd; */
+            margin-top: 3vh;
+        }
+        .FAQ-txt a{
+            text-decoration: none;
+            color:#1D817D;
+            line-height: 3;
+            margin-left: 5vw;
+        }
+        .read-more{
+            width: 100%;
+            height: 35%;
+            text-align: center;
+            margin-top: 6vh;
+            /* background-color: #fff; */
+        }
+        .read-more a{
+            background-color: #f00;
+            color: white;
+            font-size: 14px;
+            display: inline-block;
+            width: 8vw;
+            height: 3vh;
+            padding: 2vh;
+            margin-left: 22vw;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .read-more a:hover{
+            color: #000;
+        }
+        .right-top{
+            width: 10%;
+            height: 80%;
+            /* background-color: rgb(151, 119, 56); */
+            margin-left: 5vw;
+        }
+        .right-top img{
+            margin-left: 1vw;
+            margin-top: -15vh;
+        }
+        .down-section{
+            width: 100%;
+            height: 35%;
+            /* background-color: pink; */
+            display: flex;
+            /* text-align: center; */
+            margin-top: 13vh;
+            
+        }
+        .left-down{
+            width: 10%;
+            height: 80%;
+            /* background-color: #fa0; */
+        }
+        .left-down img{
+            margin-top: -15vh;
+        }
+        .after-sales-service{
+            width: 40%;
+            height: 80%;
+            background-color: #FBEFE1;
+            border-radius: 50px;
+            border: 3px solid #ffc9c9; 
+            margin-left: 2vw;           
+        }
+        .af-QA{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            /* background-color: #bdc; */
+            margin-top: 3vh;
+            
+        }
+        .af-QA h3{
+            color: #1D817D;
+            padding-top: 2vh;
+            background-color: #ffc9c9;
+            font-size: 24px;
+            display: inline-block;
+            width: 10vw;
+            height: 8vh;
+            margin-top: 0.5vh;
+        }
+        .af-QA-txt{
+            width: 100%;
+            height: 40%;
+            /* background-color: #1fd; */
+            margin-top: 3vh;
+        }
+        .af-QA-txt a{
+            text-decoration: none;
+            color:#1D817D;
+            line-height: 3;
+            margin-left: 5vw;
+        }
+        .af-more{
+            width: 100%;
+            height: 35%;
+            text-align: center;
+            margin-top: 6vh;
+            /* background-color: #fff; */
+        }
+        .af-more a{
+            background-color: #f00;
+            color: white;
+            font-size: 14px;
+            display: inline-block;
+            width: 8vw;
+            height: 3vh;
+            padding: 2vh;
+            margin-left: 22vw;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .af-more a:hover{
+            color: #000;
+        }
+        .other-QA{
+            width: 40%;
+            height: 80%;
+            background-color: #FBEFE1;
+            border-radius: 50px;
+            border: 3px solid #ffc9c9;
+            margin-left: 6vw;
+        }
+        .other-FAQ{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            /* background-color: #bdc; */
+            margin-top: 3vh;
+        }
+        .other-FAQ h3{
+            color: #1D817D;
+            padding-top: 2vh;
+            background-color: #ffc9c9;
+            font-size: 24px;
+            display: inline-block;
+            width: 10vw;
+            height: 8vh;
+            margin-top: 0.5vh;
+        }
+        .ohther-FAQ-txt{
+            width: 100%;
+            height: 40%;
+            /* background-color: #1fd; */
+            margin-top: 3vh;
+        }
+        .ohther-FAQ-txt a{
+            text-decoration: none;
+            color:#1D817D;
+            line-height: 3;
+            margin-left: 5vw;
+        }
+        .other-more{
+            width: 100%;
+            height: 35%;
+            text-align: center;
+            /* background-color: #fff; */
+            margin-top: 6vh;
+        }
+        .other-more a{
+            background-color: #f00;
+            color: white;
+            font-size: 14px;
+            display: inline-block;
+            width: 8vw;
+            height: 3vh;
+            padding: 2vh;
+            margin-left: 22vw;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .other-more a:hover{
+            color: #000;
+        }
+        .right-down{
+            width: 10%;
+            height: 80%;
+            /* background-color: rgb(151, 119, 56); */
+            margin-left: 5vw;
+        }
+        .right-down img{
+            margin-left: 1vw;
+            margin-top: -15vh;
+        }
+        .footer{
+            width: 100vw;
+            height: 10vh;
+            bottom: 0;
+            /* background-color: #fa0; */
+            position: absolute;
+        }
+        .footer .pic img{
+            width: 150px;
+            height: 100px;
+            display: inline-block;
+            margin-left: 300px;
+            margin-top: -45px;
+            border-bottom: none;
+
+        }
+        .footer-nav{
+            width: 40%;
+            display: flex;
+            margin-left: 500px;
+            word-spacing:5px;
+            margin-top: -50px;
+            border-bottom: 1px solid white;
+            /* background-color: #f00; */
+        }
+        .footer-nav a{
+            color:#1D817D ;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;           
+        }
+
+
+        .footer-nav a:hover{
+            background-color: #ffc9c9;
+        }
+        .icon{
+            color:#1D817D ;
+            margin-left: 100px;
+            word-spacing:-1px;
+        
+        }
+        
+        .txt a{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 5px;
+        
+        }
+        .txt a:hover{
+            background-color: #ffc9c9;
+        }
+        .line{
+            color:#1D817D ;
+            margin-left: 20px;
+            
+        }
+    
+        .word a{
+            color:#1D817D ;
+            font-size: 12px;
+        margin-left: 5px;
+        
+        }
+        .word a:hover{
+            background-color: #ffc9c9;
+        }
+        .template{
+            display: flex;
+        }
+        .bone{
+            margin-left: 85vw;
+            margin-top: -8vh;
+            /* background-color: #f00; */
+        }
+        .bone-txt{
+            margin-left: -5vw;
+            margin-top: -5vh;
+
+        }
+        .bone-txt a{
+            text-decoration: none;
+            color:#1D817D;
+        }
+        .bone-txt a:hover{
+            color:#ffc9c9;
+        }
+
+        .footer-txt{
+            color:#1D817D ;
+            font-size: 12px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="header">
+             <div class="main-nav">
+                 <nav class="first-nav">
+                     <a href="home.html">首頁</a>
+                     <a href="about.html">關於我們</a>
+                     <a href="product-list.html">商品列表</a> 
+                 </nav>  
+                 <nav class="second-nav">        
+                     <a href="connect.html">聯絡我們</a>
+                     <a href="FAQ.html">常見問題</a>
+                     <a href="member.html">會員中心</a>
+                     <a href="#">購物車</a>
+                 </nav> 
+             </div> 
+             <div class="logo">
+                 <img src="logo.png"> 
+             </div> 
+        </div>
+        <div class="container">
+            <div class="top-path">
+                <div class="path">
+                    <a href="home.html">首頁</a>
+                    <a href="FAQ.html">常見問題</a>
+                </div>
+            </div>  
+            <div class="search-box">
+                <div class="search-line">
+                    <input type="text" id="searchInput" placeholder="問題關鍵字搜尋">
+                </div>
+                <div class="search-button">
+                    <button type="button" onclick="search()"><img src="FAQ/search.png"></button>
+                </div>
+            </div>
+            <div class="top-section">
+                <div class="left-top">
+                    <img src="FAQ/left-top.png">
+                </div>
+                <div class="product-QA">
+                    <div class="QA">
+                    <h3>產品問題</h3>
+                    </div>
+                    <div class="QA-txt">
+                    <ul>
+                        <li><a href="#">1.該如何知道產品尺寸?</a></li>
+                        <li><a href="#">2.電器是否有附電池呢?</a></li>
+                        <li><a href="#">3.電器需充電多久再用呢?</a></li>
+                        <li><a href="#">4.不會操作怎麼辦?</a></li>
+                    </ul>
+                    </div>
+                    <div class="more">
+                        <a href="#">點我看更多 > ></a>
+                    </div>
+                </div>
+                <div class="buy-QA">
+                    <div class="FAQ">
+                    <h3>購買問題</h3>
+                    </div>
+                    <div class="FAQ-txt">
+                    <ul>
+                        <li><a href="#">1.不會用網站還有其他管道購買嗎?</a></li>
+                        <li><a href="#">2.可同時在網站及賴群下單嗎?</a></li>
+                        <li><a href="#">3.下單後多久可以收到商品呢?</a></li>
+                        <li><a href="#">4.賴群下單後可以怎麼查訂單?</a></li>
+                    </ul>
+                    </div>
+                    <div class="read-more">
+                        <a href="#">點我看更多 > ></a>
+                    </div>
+                </div>
+                <div class="right-top">
+                    <img src="FAQ/right-top.png">
+                </div>
+            </div>
+            <div class="down-section">
+                <div class="left-down">
+                    <img src="FAQ/left-down.png">
+                </div>
+                <div class="after-sales-service">
+                    <div class="af-QA">
+                    <h3>售後問題</h3>
+                    </div>
+                    <div class="af-QA-txt">
+                    <ul>
+                        <li><a href="#">1.商品若有問題該怎麼處理?</a></li>
+                        <li><a href="#">2.開箱時若沒有錄影怎麼辦?</a></li>
+                        <li><a href="#">3.商品有問題幾天內要反映?</a></li>
+                        <li><a href="#">4.退款可以轉購物金嗎?</a></li>
+                    </ul>
+                    </div>
+                    <div class="af-more">
+                        <a href="#">點我看更多 > ></a>
+                    </div>
+                </div>
+                <div class="other-QA">
+                    <div class="other-FAQ">
+                    <h3>其他問題</h3>
+                    </div>
+                    <div class="ohther-FAQ-txt">
+                    <ul>
+                        <li><a href="#">1可以加朋友進群組嗎?</a></li>
+                        <li><a href="#">2.運費怎麼算呢?</a></li>
+                        <li><a href="#">3.自取要到哪裡拿呢?</a></li>
+                        <li><a href="#">4.自取時間甚麼時候呢?</a></li>
+                    </ul>
+                    </div>
+                    <div class="other-more">
+                        <a href="#">點我看更多 > ></a>
+                    </div>
+                </div>
+                <div class="right-down">
+                    <img src="FAQ/right-down.png">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pic">
+                <img src="logo.png" >
+            </div>
+            <div class="footer-nav">
+                <nav>
+                    <a href="about.html">如何下單</a>
+                    <a href="about.html">如何付款</a>
+                    <a href="about.html">如何取貨</a>
+                </nav>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="txt">
+                        <a href="#">追蹤闆娘</a>
+                    </div>
+                    <div class="line">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <div class="word">
+                        <a href="#">加入賴群</a>
+                    </div>            
+            </div>
+                      
+            <div class="footer-txt">
+                @2023 Powered by Baby CHU Reserved.
+            </div>
+            <div class="template">
+                <div class="bone">
+                    <img src="bone.png" >      
+             </div>
+                <div class="bone-txt">
+                    <a href="#">TOP</a> 
+                </div>
+            </div>
+        </div>
+</body>
+</html>
